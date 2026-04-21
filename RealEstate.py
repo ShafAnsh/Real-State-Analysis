@@ -54,9 +54,9 @@ if rera_approved_avg_price > rera_not_approved_avg_price:
 else:
     print("RERA-approved properties do not command a price premium.")
 
-# Question 6: How does area impact price?
-# sns.scatterplot(data=df, x='area', y='price')
-# plt.show()
+Question 6: How does area impact price?
+sns.scatterplot(data=df, x='area', y='price')
+plt.show()
 
 # Question 7: Which BHK configuration is most expensive based on per sqft rate?
 most_expensive_bhk = df.groupby('bhk_count')['rate_per_sqft'].mean().idxmax()
