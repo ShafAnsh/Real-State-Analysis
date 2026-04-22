@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv('data.csv') 
+df = pd.read_csv('Gurgown_Real_Estate.csv') 
 
 # Data Cleaning
 df.columns = df.columns.str.strip().str.lower().str.replace(' ', '_')
