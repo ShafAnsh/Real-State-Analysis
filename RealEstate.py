@@ -21,8 +21,8 @@ df['flat_type'] = df['flat_type'].str.strip().str.lower()
 
 df = df.drop_duplicates()
 
-# print(df)
-# print(df.info())
+print(df)
+print(df.info())
 
 # Question 1: Which is the costliest flat in the dataset?
 costliest_flat = df.loc[df['price'].idxmax()]
@@ -67,7 +67,7 @@ most_expensive_property_type = df.groupby('flat_type')['rate_per_sqft'].mean().i
 print(f"The most expensive property type is {most_expensive_property_type}.")
 
 # Question 9: Do certain builders price higher?
-# print(df.groupby("company_name")["rate_per_sqft"].mean().sort_values(ascending=False).head(5))
+print(df.groupby("company_name")["rate_per_sqft"].mean().sort_values(ascending=False).head(5))
 # print name of top 5 
 print("The top 5 builders that price higher are:", end=" ")
 top_5_builders = df.groupby("company_name")["rate_per_sqft"].mean().sort_values(ascending=False).head(5)
